@@ -1,0 +1,36 @@
+.statusCard-parent-container {
+    width: auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.statusCard-child-container {
+    display:flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    width: 400px;
+    height: auto;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #5648b5;
+}
+
+.status-text {
+  /*  position: relative;
+    margin-top: auto;*/
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.picture {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}

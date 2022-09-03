@@ -1,0 +1,16 @@
+.checkboxes-container {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.checkboxes-container-child {
+    width:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+}
