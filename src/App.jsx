@@ -18,9 +18,10 @@ function App() {
   
   const fetchData = async () => {
     try {
-      await fetch("http://localhost:8788/statusObjGET")
-    .then(response => response)
-    .then(res => console.log(res))
+      await fetch("https://feeding-homer.pages.dev/statusObjGET")
+      .then(response => response)
+      .then(data => data.json());
+      console.log(data);
 
 
     } catch(err) {
