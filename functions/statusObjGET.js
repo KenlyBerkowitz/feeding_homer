@@ -62,14 +62,14 @@ export async function onRequest(context) {
     try{
         const {request, env} = context;
 
-        let feedingStatus = await env.HOMER.get("hadMeal", {type: "json"});
-        console.log(feedingStatus)
+        let feedingStatus = await env.feeding_homer.get("hadMeal", {type: "json"});
+        console.log(feedingStatus);
         feedingStatus.statusText = analyzeData(feedingStatus);
 
         if(feedingStatus.statusText === "Happy Boy!")
-            feedingStatus.img = await env.HOMER.get("homer-happy-pic");
+            feedingStatus.img = await env.feeding_homer.get("homer-happy-pic");
         else
-            feedingStatus.img = await env.HOMER.get("homer-mad-pic");
+            feedingStatus.img = await env.feeding_homer.get("homer-mad-pic");
 
         const options = {
             headers: {
