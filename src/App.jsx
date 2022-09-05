@@ -6,7 +6,7 @@ import Checkboxes from './components/Checkboxes/Checkboxes';
 function App() {
   const [hadBreakfast, setHadBreakfast] = useState(false);
   const [hadDinner, setHadDinner] = useState(false);
-  const [statusText, setStatusText] = useState();
+  const [statusText, setStatusText] = useState("Happy Boy!");
   
   const Title = () => {
     return ( 
