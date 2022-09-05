@@ -9,11 +9,11 @@ const ACheckbox = (props) => {
   return (
     <div>
       <FormControlLabel 
-      className="aCheckbox"
-      disabled 
-      control={<Checkbox  checked={props.hadMeal} />} 
-      label={<Typography variant="h6" style={{ color: '#48a6b5', fontSize: 50 }}>{props.label}</Typography>} 
-      sx={{ '& .MuiSvgIcon-root': { fontSize: 100, color: "#5648b5" }} }  />
+        className="aCheckbox"
+        disabled
+        control={<Checkbox  checked={props.hadMeal} />}
+        label={<Typography variant="h6" style={{ color: '#48a6b5', fontSize: 50 }}>{props.label}</Typography>}
+        sx={{ '& .MuiSvgIcon-root': { fontSize: 100, color: "#5648b5" }} }  />
     </div>
   );
 } 

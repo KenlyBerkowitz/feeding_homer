@@ -4,9 +4,9 @@ import StatusCard from './components/statusCard/StatusCard';
 import Checkboxes from './components/Checkboxes/Checkboxes';
 
 function App() {
-  const [hadBreakfast, setHadBreakfast] = useState(true);
+  const [hadBreakfast, setHadBreakfast] = useState(false);
   const [hadDinner, setHadDinner] = useState(false);
-  const [picture, setPicture] = useState();
+  const [statusText, setStatusText] = useState();
   
   const Title = () => {
     return ( 
@@ -15,13 +15,18 @@ function App() {
       </div>
     );
   }
+
   
   const fetchData = async () => {
     try {
-      await fetch("https://feeding-homer.pages.dev/statusObjGET")
-      .then(response => response)
-      .then(data => data.json());
-      console.log(data);
+      await fetch("https://fh-workerget.k-berkowitz.workers.dev")
+      .then(data => data.json())
+      .then(data => {
+        console.log(JSON.stringify(data));
+        setHadBreakfast(data.breakfast);
+        setHadDinner(data.dinner);
+        setStatusText(data.statusText);
+      });
 
 
     } catch(err) {
@@ -36,7 +41,7 @@ function App() {
   return (
     <div className="App">
       <Title />
-      <StatusCard picture={picture}/>
+      <StatusCard statusText={statusText}/>
       <Checkboxes breakfast={hadBreakfast} dinner={hadDinner}/>
     </div>
   )
