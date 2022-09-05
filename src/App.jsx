@@ -23,8 +23,8 @@ function App() {
       .then(data => data.json())
       .then(data => {
         console.log(JSON.stringify(data));
-        setHadBreakfast(data.breakfast);
-        setHadDinner(data.dinner);
+        setHadBreakfast(JSON.parse(data.breakfast));
+        setHadDinner(JSON.parse(data.dinner));
         setStatusText(data.statusText);
       });
 
